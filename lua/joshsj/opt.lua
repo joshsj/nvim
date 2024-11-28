@@ -64,3 +64,5 @@ vim.opt.scrolloff = 999
 
 -- Block cursor always
 vim.opt.guicursor = ''
+
+vim.opt.colorcolumn = '80,120'
