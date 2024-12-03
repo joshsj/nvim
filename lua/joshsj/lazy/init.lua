@@ -52,7 +52,7 @@ require('lazy').setup({
   --  config = function() ... end
   require 'joshsj/lazy/which_key',
 
-  require 'joshsj/lazy/indent_blankfiles',
+  --require 'joshsj/lazy/indent_blankfiles',
 
   -- NOTE: Plugins can specify dependencies.
   --
