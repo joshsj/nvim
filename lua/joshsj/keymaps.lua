@@ -34,3 +34,8 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
+vim.keymap.set("n", "<M-k>", ":m-2<CR>")
+vim.keymap.set("n", "<M-j>", ":m+1<CR>")
+
+vim.keymap.set("i", "<M-k>", "<ESC>:m-2<CR>i")
+vim.keymap.set("i", "<M-j>", "<ESC>:m+1<CR>i")

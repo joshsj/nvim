@@ -12,25 +12,42 @@ return {
         { '\\', ':Neotree reveal<CR>', desc = 'NeoTree reveal', silent = true },
     },
     opts = {
-        filesystem = {
-            window = {
-                position = 'float',
-                mappings = {
-                    ['\\'] = 'close_window',
-                },
+        close_if_last_window = true,
+        enable_git_status = true,
+        name = {
+            trailing_slash = true,
+            use_git_status_colors = true,
+        },
+        window = {
+            position = 'float',
+            width = 150,
+            mappings = {
+                ['\\'] = 'close_window',
             },
-            hijack_netrw_behavior = 'open_default'
+        },
+        default_component_configs = {
+          indent = {
+                indent_size = 3
+            },
         },
         filtered_items = {
               visible = false,
               hide_dotfiles = false,
               hide_gitignored = true,
               hide_hidden = false,
+        },
+        buffers = {
+              follow_current_file = {
+                    enabled = true
+              }
+        },
+        event_handlers = {
+            {
+              event = "neo_tree_buffer_enter",
+              handler = function()
+                vim.cmd("setlocal relativenumber")
+              end,
+            },
         }
-    },
-    buffers = {
-          follow_current_file = {
-                enabled = true
-          }
     }
 }
