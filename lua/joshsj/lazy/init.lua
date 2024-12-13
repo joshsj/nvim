@@ -24,6 +24,17 @@ vim.opt.rtp:prepend(lazypath)
 require('lazy').setup({
   "olimorris/onedarkpro.nvim",
   { "rose-pine/neovim", name = "rose-pine" },
+  {
+    'sainnhe/gruvbox-material',
+    config = function()
+      vim.g.gruvbox_material_enable_italic = true
+      vim.g.gruvbox_material_background = 'soft'
+      vim.g.gruvbox_material_better_performance = 1
+      vim.g.gruvbox_material_cursor = "red"
+      vim.opt.background = "dark"
+      vim.cmd("colorscheme gruvbox-material")
+    end
+  },
 
   -- NOTE: Plugins can be added with a link (or for a github repo: 'owner/repo' link).
   'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
@@ -34,7 +45,7 @@ require('lazy').setup({
   --
   -- Use `opts = {}` to force a plugin to be loaded.
 
-  require 'joshsj/lazy/gitsigns',
+  --require 'joshsj/lazy/gitsigns',
 
   -- NOTE: Plugins can also be configured to run Lua code when they are loaded.
   --
@@ -64,10 +75,15 @@ require('lazy').setup({
 
   require 'joshsj/lazy/telescope',
 
+  require 'joshsj/lazy/trouble',
+
   -- LSP Plugins
   require 'joshsj/lazy/lazy_dev',
+
   { 'Bilal2453/luvit-meta', lazy = true },
+
   require 'joshsj/lazy/lspconfig',
+  require 'joshsj/lazy/roslyn',
 
   -- require 'joshsj/lazy/conform',
 

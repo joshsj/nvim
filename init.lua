@@ -24,11 +24,7 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 
 require 'joshsj/lazy'
 
-function Theme(mode)
-  vim.opt.background = 'light'
-  vim.cmd("colorscheme one" .. mode)
-end
+vim.cmd("colorscheme onedark");
 
-Theme("dark")
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et

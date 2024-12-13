@@ -70,7 +70,7 @@ return {
     pcall(require('telescope').load_extension, 'ui-select')
 
     vim.keymap.set('n', '<leader><leader>', builtin.find_files, { desc = '[S]earch [F]iles' })
-    vim.keymap.set("n", "<Tab><Tab>", builtin.buffers, { desc = '[S]earch Open Buffers' })
+    vim.keymap.set("n", "<leader><Tab>", builtin.buffers, { desc = '[Search open buffers' })
     vim.keymap.set('n', '<leader>sh', builtin.help_tags, { desc = '[S]earch [H]elp' })
     vim.keymap.set('n', '<leader>sk', builtin.keymaps, { desc = '[S]earch [K]eymaps' })
     vim.keymap.set('n', '<leader>sg', builtin.live_grep, { desc = '[S]earch by [G]rep' })
