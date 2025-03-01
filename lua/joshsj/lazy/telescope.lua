@@ -52,10 +52,9 @@ return {
 
     require('telescope').setup {
       defaults = {
-        mappings = {
-          i = {
-            ["<esc>"] = actions.close,
-          }
+        layout_config = {
+          width = { 0.99, padding = 0 },
+          height = { 0.99, padding = 0 },
         },
       },
       extensions = {
@@ -70,7 +69,9 @@ return {
     pcall(require('telescope').load_extension, 'ui-select')
 
     vim.keymap.set('n', '<leader><leader>', builtin.find_files, { desc = '[S]earch [F]iles' })
-    vim.keymap.set("n", "<leader><Tab>", builtin.buffers, { desc = '[Search open buffers' })
+    vim.keymap.set('n', '<leader>sf', builtin.find_files, { desc = '[S]earch [F]iles' })
+    vim.keymap.set("n", "<leader><Tab>", builtin.buffers, { desc = '[S]earch Open [B]uffers' })
+    vim.keymap.set("n", "<leader>sb", builtin.buffers, { desc = '[S]earch Open [B]uffers' })
     vim.keymap.set('n', '<leader>sh', builtin.help_tags, { desc = '[S]earch [H]elp' })
     vim.keymap.set('n', '<leader>sk', builtin.keymaps, { desc = '[S]earch [K]eymaps' })
     vim.keymap.set('n', '<leader>sg', builtin.live_grep, { desc = '[S]earch by [G]rep' })

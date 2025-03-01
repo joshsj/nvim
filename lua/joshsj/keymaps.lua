@@ -29,13 +29,17 @@ vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right win
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
+-- Thanks Prime
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
-vim.keymap.set("n", "<M-k>", ":m-2<CR>")
-vim.keymap.set("n", "<M-j>", ":m+1<CR>")
+-- Move lines
+vim.keymap.set({ "n", "i" }, "<M-k>", "<cmd>m-2<CR>")
+vim.keymap.set({ "n", "i" }, "<M-j>", "<cmd>m+1<CR>")
 
-vim.keymap.set("i", "<M-k>", "<ESC>:m-2<CR>i")
-vim.keymap.set("i", "<M-j>", "<ESC>:m+1<CR>i")
+-- Buffer things
+vim.keymap.set("n", "<C-b>d", "<cmd>bd<CR>", { desc = " Delete" });
+vim.keymap.set("n", "<C-b>D", "<cmd>bd!<CR>", { desc = " Destroy " });
+vim.keymap.set("n", "<C-b>n", "<cmd>new<CR>", { desc = " New" });

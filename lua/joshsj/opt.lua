@@ -1,11 +1,12 @@
 vim.opt.number = true
 vim.opt.relativenumber = true
 
+vim.opt.wrap = false
+vim.opt.textwidth = 0
+vim.opt.wrapmargin = 0
+
 -- Enable mouse mode, can be useful for resizing splits for example!
 vim.opt.mouse = 'a'
-
--- Don't show the mode, since it's already in the status line
-vim.opt.showmode = false
 
 -- Sync clipboard between OS and Neovim.
 --  Schedule the setting after `UiEnter` because it can increase startup-time.
@@ -62,7 +63,5 @@ vim.opt.cursorline = true
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 999
 
--- Block cursor always
-vim.opt.guicursor = ''
-
 vim.opt.colorcolumn = '120'
+

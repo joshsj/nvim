@@ -10,10 +10,22 @@ return {
   },
   opts = {
     warn_no_results = false,
-    modes={
-      diagnostics = {
-        focus = false,
-      }
-    }
+    focus = true,
+    --win = {
+    --  type = "main",
+    --  scratch = false,
+    --  win = 0,
+    --  minimal = true,
+    --},
+    --preview = {
+    --  type = "main",
+    --  scratch = false,
+    --  win = 0,
+    --  minimal = true,
+    --},
+    --keys = {
+    --  ["<cr>"] = "jump_close",
+    --  ["<esc>"] = "jump_close",
+    --}
   }
 }

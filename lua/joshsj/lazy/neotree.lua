@@ -9,7 +9,7 @@ return {
     },
     cmd = 'Neotree',
     keys = {
-        { '\\', ':Neotree reveal<CR>', desc = 'NeoTree reveal', silent = true },
+        --{ '\\', ':Neotree reveal<CR>', desc = 'NeoTree reveal', silent = true },
     },
     opts = {
         close_if_last_window = true,
@@ -19,8 +19,8 @@ return {
             use_git_status_colors = true,
         },
         window = {
-            position = 'float',
-            width = 150,
+            position = 'current',
+            --width = 150,
             mappings = {
                 ['\\'] = 'close_window',
             },
