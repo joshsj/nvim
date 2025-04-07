@@ -71,8 +71,10 @@ require('lazy').setup({
   -- you do for a plugin at the top level, you can do for a dependency.
   --
   -- Use the `dependencies` key to specify the dependencies of a particular plugin
-  --require 'joshsj/lazy/neotree',
-  -- Just testing it out
+
+-- Detect tabstop and shiftwidth automatically
+  'tpope/vim-sleuth',
+
   require 'joshsj/lazy/oil',
 
   require 'joshsj/lazy/telescope',
@@ -81,8 +83,6 @@ require('lazy').setup({
 
   -- LSP Plugins
   require 'joshsj/lazy/lazy_dev',
-
-  { 'Bilal2453/luvit-meta', lazy = true },
 
   require 'joshsj/lazy/lspconfig',
   require 'joshsj/lazy/roslyn',
