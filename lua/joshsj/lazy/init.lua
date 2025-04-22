@@ -73,7 +73,10 @@ require('lazy').setup({
   -- Use the `dependencies` key to specify the dependencies of a particular plugin
 
 -- Detect tabstop and shiftwidth automatically
-  'tpope/vim-sleuth',
+  {
+    'nmac427/guess-indent.nvim',
+    config = function() require('guess-indent').setup {} end,
+  },
 
   require 'joshsj/lazy/oil',
 
@@ -86,8 +89,8 @@ require('lazy').setup({
 
   require 'joshsj/lazy/lspconfig',
   require 'joshsj/lazy/roslyn',
-
-  -- require 'joshsj/lazy/conform',
+  --
+  require 'joshsj/lazy/conform',
 
   require 'joshsj/lazy/cmp',
 

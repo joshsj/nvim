@@ -162,10 +162,23 @@ return {
     --  - settings (table): Override the default settings passed when initializing the server.
     --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
     local servers = {
-     'zls',
-     'roslyn',
-     'lua-language-server',
-     'vim-language-server',
+      'zls',
+      'roslyn',
+      'lua-language-server',
+      'vim-language-server',
+      volar = {},
+      ts_ls = {
+        filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue' },
+        init_options = {
+          plugins = {
+            {
+              name = '@vue/typescript-plugin',
+              location = vim.fn.stdpath 'data' .. '/mason/packages/vue-language-server/node_modules/@vue/language-server',
+              languages = { 'vue' },
+            },
+          },
+        },
+      },
       lua_ls = {
         -- cmd = {...},
         -- filetypes = { ...},
@@ -182,12 +195,12 @@ return {
       },
     }
 
-    require('mason').setup({
+    require('mason').setup {
       registries = {
-        "github:mason-org/mason-registry",
-        "github:Crashdummyy/mason-registry"
-      }
-    })
+        'github:mason-org/mason-registry',
+        'github:Crashdummyy/mason-registry',
+      },
+    }
 
     require('mason-tool-installer').setup { ensure_installed = servers }
 
